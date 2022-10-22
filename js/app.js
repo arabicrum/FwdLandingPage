@@ -128,9 +128,11 @@ const activeclass = ()=>{
    for(section of sectionContainer){
     const sectionheight = section.clientHieght;
     const sectionoffsettop = section.offsetTop;
+    const sectionoffsetbot = section.getBoundingClientRect().bottom;
+    console.log(sectionoffsetbot);
 
     //idk why but subtracting 100 here realy made everything work 
-   if(  window.scrollY > sectionoffsettop-100)
+   if(  window.scrollY > sectionoffsettop && 0 <  sectionoffsetbot)
    {
     section.classList.add('your-active-class');
    

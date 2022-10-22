@@ -132,7 +132,7 @@ const activeclass = ()=>{
     console.log(sectionoffsetbot);
 
     //idk why but subtracting 100 here realy made everything work 
-   if(  window.scrollY > sectionoffsettop *(92/100) && 0 <  sectionoffsetbot)
+   if(  window.scrollY > sectionoffsettop *(92/100) && 0 <  sectionoffsetbot  -100)
    {
     section.classList.add('your-active-class');
    

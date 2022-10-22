@@ -132,7 +132,7 @@ const activeclass = ()=>{
     console.log(sectionoffsetbot);
 
     //idk why but subtracting 100 here realy made everything work 
-   if(  window.scrollY > sectionoffsettop && 0 <  sectionoffsetbot)
+   if(  window.scrollY > sectionoffsettop *(92/100) && 0 <  sectionoffsetbot)
    {
     section.classList.add('your-active-class');
    
@@ -216,7 +216,7 @@ const closefunc = () =>{
       <p>${sectiondata}</p>
     </div>`;
   newsection.setAttribute('id' , sectionid);
-  newsection.setAttribute('data-nav' , sectionid);
+  newsection.setAttribute('data-nav' , sectionname);
   newsection.innerHTML = sectionhtml;
   document.querySelector('main').appendChild(newsection);
   sectionContainer = document.querySelectorAll('section');
